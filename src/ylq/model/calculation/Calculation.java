@@ -128,11 +128,11 @@ public class Calculation {
 
 
     private Double calculateRotatingSpeed() {
-        return velocity * (numberOfTeeth * modulus);
+        return velocity * (numberOfTeeth * modulus) / 60;
     }
 
     private Double calculatePower() {
-        return force * velocity / powerTransferEfficiency * 100;
+        return force * velocity / powerTransferEfficiency * 100 * 1000;
     }
 
     /**

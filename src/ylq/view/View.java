@@ -63,7 +63,7 @@ public class View extends JFrame implements MyLayout<View> {
     private Map<String, InputBlockWithLabel> nameBlockMap = new HashMap<>();
 
     public View() {
-        for (ContinuousArgument continuousArgument : ContinuousArgument.continuousArguments) {
+        for (ContinuousArgument continuousArgument : ContinuousArgument.CONTINUOUS_ARGUMENTS) {
             nameBlockMap.put(
                     continuousArgument.getArgumentName(),
                     TextFieldWithLabel.createWithLayout(continuousArgument.getArgumentName(), continuousArgument.getUnitName())
@@ -119,7 +119,7 @@ public class View extends JFrame implements MyLayout<View> {
     }
 
     private void passArgumentValueToCalculation() {
-        for (ContinuousArgument continuousArgument : ContinuousArgument.continuousArguments) {
+        for (ContinuousArgument continuousArgument : ContinuousArgument.CONTINUOUS_ARGUMENTS) {
             // TODO: 2022/4/20 重复代码
             if (continuousArgument.equals(ContinuousArgument.POWER)) {
                 continue;

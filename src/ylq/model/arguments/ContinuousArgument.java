@@ -18,8 +18,9 @@ public enum ContinuousArgument {
     CARRIER_SPACING("承载装置间距", "m"),
     MOTOR_RESPONSE_TIME("电机响应时间", "s"),
     POWER_TRANSFER_EFFICIENCY("功率传递效率", "%"),
-    POWER("功率", "kW"),
-    ROTATING_SPEED("转速", "r/s"),
+    POWER("功率", "W"),
+    // TODO: 2022/4/29 能不能做到更新单位后自动更新算法?
+    ROTATING_SPEED("转速", "r/min"),
     NUMBER_OF_TEETH("齿数", ""),
     MODULUS("模数", "mm"),
     SHAFT_DIAMETER_OF_POSITION_WHERE_NO_NEED_TO_MACHINE_KEYWAY("无需加工键槽处轴径", "mm"),
@@ -31,7 +32,7 @@ public enum ContinuousArgument {
     private String unitName;
 
     // TODO: 2022/4/18 这个数组需要手动维护，容易出错
-    public static final ContinuousArgument[] continuousArguments = {
+    public static final ContinuousArgument[] CONTINUOUS_ARGUMENTS = {
             AVERAGE_FRUIT_WEIGHT,
             CHAIN_WEIGHT_PER_METER,
             PRODUCTIVITY,
